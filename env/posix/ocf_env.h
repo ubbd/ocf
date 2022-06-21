@@ -77,11 +77,7 @@ typedef uint64_t sector_t;
 					"assertion failure")
 
 /* MISC UTILITIES */
-#define container_of(ptr, type, member) ({          \
-	const typeof(((type *)0)->member)*__mptr = (ptr);    \
-	(type *)((char *)__mptr - offsetof(type, member)); })
-
-#define ARRAY_SIZE(x) (sizeof(x) / sizeof(*(x)))
+#include "/data/ubbd/include/utils.h"
 
 /* STRING OPERATIONS */
 #define env_memcpy(dest, dmax, src, slen) ({ \
