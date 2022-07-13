@@ -12,7 +12,7 @@ OBJS = $(patsubst %.c, %.o, $(SRC))
 PROGRAM=simple
 
 CC = gcc
-CFLAGS = -g -Wall -I${INCDIR} -I${SRCDIR}/ocf/env/
+CFLAGS = -g -Wall -I${INCDIR} -I${SRCDIR}/ocf/env/ -I${OCFDIR}/../include/
 LDFLAGS = -lm -lz -pthread
 
 all: sync
